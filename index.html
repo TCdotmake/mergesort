@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<script type="module">
+  import { mergesort } from "./mergesort.js";
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+  const arr = [];
+  for (let i = 0; i <= 30; i++) {
+    arr.push(getRandomInt(99));
+  }
+
+  let copy = structuredClone(arr);
+  console.log("Original:");
+  console.log(copy);
+  mergesort(arr, 0, arr.length);
+  console.log("Sorted:");
+  console.log(arr);
+</script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mergesort</title>
+  </head>
+  <body></body>
+</html>
